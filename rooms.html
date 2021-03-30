@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+        <script src="app.js"></script>
+        <title>Hotel</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-light fixed top">
+            <a href="#" class="navbar-brand">
+                <img src="img/logo.png" alt="Hotel" width="120" height="auto" class="d-inline-block align-top">
+            </a>
+            <button type="button" class="navbar-toggler order-first" data-toggle="collapse" data-target="#navbarMenu" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarMenu" >
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <a href="" role="button" id="bookingButton"class=" btn btn-success btn-lg text-white d-none d-sm-block "> 
+                    <h5 class="mb-0"> <i class="fas fa-calendar"></i> Book a room</h5>
+                </a>
+            </div>
+        </nav>
+        <header class="jumbotron "> 
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col-12 col-sm-6 ">
+                        <h2 class="text-center d-flex align-items-center justify-content-sm-end justify-content-center">The luxury Hotel </h2> 
+                    </div>
+                    <div class="col-12 col-sm-6 align-self-center">
+                        <h2 class=" text-center d-flex justify-content-sm-start justify-content-center ">
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        </h2>
+                    </div>
+                <div class="col d-flex justify-content-center mt-1 d-block d-sm-none">
+                    <a href="" role="button" class=" btn btn-success  btn-lg text-white "> 
+                        <h5 class="mb-0"> <i class="fas fa-calendar"></i> Book a room</h5>
+                    </a>
+                </div>
+            </div>
+            
+        </header>
+       <div class="container-fluid">
+            <div class="row row-content mb-5 ">
+                <div class="col-12 mb-2">
+                    <h2 class=" text-white text-center">Rooms:</h2>
+                </div>
+                <!-- ACCORDION FOR ROOMS TYPE -->
+                <div class="accordion col-12" id="roomsAccordion">
+                    <div class="card">
+                        <div class="card-header"  id="heading1">
+                            <h2 class="mb-0"> 
+                                <button class="btn btn-lg btn-block text-center" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                    Standard
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapse1" class="collapse " data-parent="#roomsAccordion">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <img src="img/room1.jpeg" class=" d-block w-100 img-thumbnail "alt="">
+                                    </div>
+                                    <div class="col col-sm col-lg mr-0">
+                                        
+                                        <p>The approx. 18-22m² “standard class” rooms are located at the front of the seashore and boast the highest possible level of living and sleeping comfort. All standard rooms are equipped with a comfortable sleeping system, air conditioning, a cosy seating area, a desk, a flat screen TV, and a modern bathroom with shower.</p>
+                                    </div>
+                                    <div class="col-4 col-sm-3 col-lg-2 ">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <h6>
+                                                <i class="fas fa-male"></i>
+                                                <i class="fas fa-male"> </i>
+                                                    People
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                <i class="fas fa-wifi"></i>
+                                                Free wifi
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-eye"> </i>
+                                                    View
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-tv"></i>
+                                                    TV
+                                                </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"  id="heading2">
+                            <h2 class="mb-0"> 
+                                <button class="btn btn-lg btn-block text-center" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    Deluxe
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapse2" class="collapse " data-parent="#roomsAccordion">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <img src="img/room4.jpeg" class=" d-block w-100 img-thumbnail "alt="">
+                                    </div>
+                                    <div class="col col-sm col-lg mr-0">
+                                        
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cum eveniet eum beatae quibusdam nesciunt deserunt, voluptatem ducimus accusantium sapiente nostrum adipisci commodi omnis explicabo asperiores velit ullam? Exercitationem, officiis.</p>
+                                    </div>
+                                    <div class="col-4 col-sm-3 col-lg-2 ">
+                                        <ul class="list-unstyled ">
+                                            <li>
+                                                <h6>
+                                                <i class="fas fa-male"></i>
+                                                <i class="fas fa-male"> </i>
+                                                    People
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                <i class="fas fa-wifi"></i>
+                                                Free wifi
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-tv"></i>
+                                                    TV
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-eye"> </i>
+                                                    View
+                                                </h6>
+                                            </li>
+                                            <li>
+                                               <h6>
+                                                <i class="fas fa-wine-bottle"></i>
+                                                Minibar
+                                               </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-swimming-pool"></i>
+                                                    Private pool
+                                                </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"  id="heading3">
+                            <h2 class="mb-0"> 
+                                <button class="btn btn-lg btn-block text-center" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    Jr. Suite
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapse3" class="collapse " data-parent="#roomsAccordion">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <img src="img/room3.jpeg" class=" d-block w-100 img-thumbnail "alt="">
+                                    </div>
+                                    <div class="col col-sm col-lg mr-0">
+                                        
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cum eveniet eum beatae quibusdam nesciunt deserunt, voluptatem ducimus accusantium sapiente nostrum adipisci commodi omnis explicabo asperiores velit ullam? Exercitationem, officiis.</p>
+                                    </div>
+                                    <div class="col-4 col-sm-3 col-lg-2 ">
+                                        <ul class="list-unstyled ">
+                                            <li>
+                                                <h6>
+                                                <i class="fas fa-male"></i>
+                                                <i class="fas fa-male"> </i>
+                                                    People
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                <i class="fas fa-wifi"></i>
+                                                Free wifi
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-tv"></i>
+                                                    TV
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-eye"> </i>
+                                                    View
+                                                </h6>
+                                            </li>
+                                            <li>
+                                               <h6>
+                                                <i class="fas fa-wine-bottle"></i>
+                                                Minibar
+                                               </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-swimming-pool"></i>
+                                                    Private pool
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="far fa-gem"></i>
+                                                    Private patio
+                                                </h6>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"  id="heading4">
+                            <h2 class="mb-0"> 
+                                <button class="btn btn-lg btn-block text-center" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    Suite
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapse4" class="collapse " data-parent="#roomsAccordion">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <img src="img/room2.jpeg" class=" d-block w-100 img-thumbnail "alt="">
+                                    </div>
+                                    <div class="col col-sm col-lg mr-0">
+                                        
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cum eveniet eum beatae quibusdam nesciunt deserunt, voluptatem ducimus accusantium sapiente nostrum adipisci commodi omnis explicabo asperiores velit ullam? Exercitationem, officiis.</p>
+                                    </div>
+                                    <div class="col-4 col-sm-3 col-lg-2 ">
+                                        <ul class="list-unstyled ">
+                                            <li>
+                                                <h6>
+                                                <i class="fas fa-male"></i>
+                                                <i class="fas fa-male"> </i>
+                                                    People
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                <i class="fas fa-wifi"></i>
+                                                Free wifi
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-tv"></i>
+                                                    TV
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-eye"> </i>
+                                                    View
+                                                </h6>
+                                            </li>
+                                            <li>
+                                               <h6>
+                                                <i class="fas fa-wine-bottle"></i>
+                                                Minibar
+                                               </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-swimming-pool"></i>
+                                                    Private pool
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="far fa-gem"></i>
+                                                    Private patio
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <h6>
+                                                    <i class="fas fa-spa"></i> 
+                                                    Spa included
+                                                </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+       </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row align-items-center ">
+                    <div class="offset-1 col-5 col-sm-4">
+                        <ul class="list-unstyled mt-2">
+                            <li>Home</li>
+                            <li>Rooms</li>
+                            <li>Services</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-4 align-self-center">
+                        <h6 class="mt-4">Our Adress:</h6>
+                        <address>
+                        Kantstr 144, <br>
+                        12033 Berlin <br>
+                        Germany <br>
+                        <i class="fas fa-phone"></i> 
+                        +34432234678
+                        <br>
+                        <i class="fas fa-envelope"></i>
+                        TheLuxury@jajaj.it
+                        </address>  
+                    </div>
+                    <div class="col-12 col-sm-3 ">
+                        <div class="text-center d-flex justify-content-center">
+                            <a role="button" class="btn btn-lg  btn-facebook" href=""> <i class="fab fa-facebook"></i></a>
+                            <a role="button" class="btn btn-lg btn-google" href=""> <i class="fab fa-google"></i></a>
+                            <a role="button" class="btn btn-lg " href=""> <i class="fab fa-twitter"></i></a>
+                            <a role="button" class="btn btn-lg  btn-google" href=""> <i class="fab fa-github"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class=" row d-block copyright ">
+                    Copyrights reserved &copy;
+                </div>
+            </div>
+        </footer>
+
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
