@@ -135,7 +135,7 @@ padding: 0rem 0rem 0rem 0rem ;}
 }
 
 .accordion .img-thumbnail{
-    background-color: #004353;
+    background-color: #499dae;;
 }
 
 .jumbotron > .container-fluid {
@@ -157,6 +157,35 @@ padding: 0rem 0rem 0rem 0rem ;}
     color: #499dae;
     border-radius: 15px;
 }
+
+label, input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #MODAL */
+.form-group{
+    margin-bottom: 4px;
+}
+
+.modal-header{
+    background-color: #004353;
+    color: whitesmoke;
+}
+
+.modal-footer{
+    background-color: #499dae;
+}
+
+.modal-footer > button{
+    color: whitesmoke;
+}
+/* #FOOTER */
+
+.copyright{
+    font-size: 70%;
+}
+
 .footer{
     background-color: #499dae ;
     margin-bottom: 0px;
@@ -168,15 +197,4 @@ address {
     margin: 0px;
     color: #0f0f0f; }
 
-label, input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.copyright{
-    font-size: 70%;
-}
 /* */

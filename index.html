@@ -9,10 +9,79 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
-        <script src="app.js"></script>
+        
         <title>Hotel</title>
     </head>
     <body>
+        <!-- #BOOKING-MODAL  -->
+        <div class="modal fade" id="reservationModal" tabindex="1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header row">
+                        <h3 class="modal-title col-10 text-center"> Check availability!</h3>
+                        <button role="button" data-dismiss="modal" class="close col-2 text-white" arie-label="Close" >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form">
+                                        <div class="form-group mb-1 row">
+                                            <label for="check-in" class="col-5 ">Check-in Date</label>
+                                            <input type="date" id="check-in" class="col-6">
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="check-out" class="col-5 ">Check-out Date</label>
+                                            <input type="date" id="check-out" class="col-6">
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="nights" class="col-5 ">Nights</label>
+                                            <input type="number" id="nights" class="col-6" value="" disabled>
+                                        </div>
+                                        <div class="form-group row ">
+                                            <div class="col-6 d-flex justify-content-center ">
+                                                <label for="adults" class=" mr-2 ">Adults</label>
+                                                <select name="adults" id="adults" >
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-6 d-flex justify-content-center">
+                                                <label for="kids" class="mr-2 ">Kids</label>
+                                                <select name="kids" id="kids" >
+                                                    <option value="0"></option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="roomType" class="col-5">Room category</label>
+                                            <select name="roomType" id="roomType" class="col-5">
+                                                <option value="null">Select a room</option>
+                                                <option value="standard"> Standard</option>
+                                                <option value="deluxe"> Deluxe</option>
+                                                <option value="premium"> Premium</option>
+                                                <option value="suite"> Suite</option>
+                                            </select>
+                                        </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-lg bg-success">
+                            Let's go!
+                        </button>
+                        <button type="reset" data-dismiss="modal" class="btn btn-lg bg-danger">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- #NAVBAR  -->
         <nav class="navbar navbar-expand-sm navbar-light fixed top">
             <a href="#" class="navbar-brand">
                 <img src="img/logo.png" alt="Hotel" width="120" height="auto" class="d-inline-block align-top">
@@ -35,7 +104,7 @@
                         <a href="contact.html" class="nav-link">Contact</a>
                     </li>
                 </ul>
-                <a href="" role="button" class=" btn btn-success btn-lg text-white d-none d-sm-block "> 
+                <a role="button" data-target="#reservationModal" data-toggle="modal"class=" btn btn-success btn-lg text-white d-none d-sm-block "> 
                     <h5 class="mb-0"> <i class="fas fa-calendar"></i> Book a room</h5>
                 </a>
             </div>
@@ -142,7 +211,7 @@
                 </div>
                 </div>
                 <div class="col d-flex justify-content-center mt-2 d-block d-sm-none">
-                    <a href="" role="button" class=" btn btn-success  btn-lg text-white "> 
+                    <a href="" role="button" class=" btn btn-success  btn-lg text-white " data-target="#reservationModal" data-toggle="modal"> 
                         <h5 class="mb-0"> <i class="fas fa-calendar"></i> Book a room</h5>
                     </a>
                 </div>
@@ -202,14 +271,22 @@
         </div>
 
         <footer class="footer">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row align-items-center ">
                     <div class="offset-1 col-5 col-sm-4">
                         <ul class="list-unstyled mt-2">
-                            <li>Home</li>
-                            <li>Rooms</li>
-                            <li>Services</li>
-                            <li>Contact</li>
+                            <li>
+                                <a href="#" class="text-dark">Home</a>
+                            </li>
+                            <li>
+                                <a href="/rooms.html" class="text-dark">Rooms</a>
+                            </li>
+                            <li>
+                                <a href="/services.html" class="text-dark">Services</a>
+                            </li>
+                            <li>
+                                <a href="/contact.html" class="text-dark">Contact</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-6 col-sm-4 align-self-center">
@@ -245,5 +322,6 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
