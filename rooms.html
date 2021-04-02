@@ -44,6 +44,7 @@
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
+                                                    <option value="4">4</option>
                                                 </select>
                                             </div>
                                             <div class="col-6 d-flex justify-content-center">
@@ -52,16 +53,18 @@
                                                     <option value="0"></option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
+                                                    <option value="3">3</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="roomType" class="col-5">Room category</label>
                                             <select name="roomType" id="roomType" class="col-5">
-                                                <option> Standard</option>
-                                                <option> Deluxe</option>
-                                                <option> Premium</option>
-                                                <option> Suite</option>
+                                                <option value="null">Select a room</option>
+                                                <option value="standard"> Standard</option>
+                                                <option value="superior">Superior</option>
+                                                <option value="deluxe"> Deluxe</option>
+                                                <option value="suite"> Suite</option>
                                             </select>
                                         </div>
                                 </div>
@@ -82,7 +85,7 @@
 
         <!-- #NAVBAR  -->
         <nav class="navbar navbar-expand-sm navbar-light fixed top">
-            <a href="#" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 <img src="img/logo.png" alt="Hotel" width="120" height="auto" class="d-inline-block align-top">
             </a>
             <button type="button" class="navbar-toggler order-first" data-toggle="collapse" data-target="#navbarMenu" >
@@ -94,10 +97,10 @@
                         <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a href="#" class="nav-link">Rooms</a>
+                        <a href="#" class="nav-link">Rooms & Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="services.html" class="nav-link">Services</a>
+                        
                     </li>
                     <li class="nav-item">
                         <a href="contact.html" class="nav-link">Contact</a>
@@ -112,7 +115,8 @@
             <div class="container-fluid">
                 <div class="row ">
                     <div class="col-12 col-sm-6 ">
-                        <h2 class="text-center d-flex align-items-center justify-content-sm-end justify-content-center">The luxury Hotel </h2> 
+                        <h2 class="text-center d-flex align-items-center justify-content-sm-end justify-content-center">
+                            The Palms Hotel </h2> 
                     </div>
                     <div class="col-12 col-sm-6 align-self-center">
                         <h2 class=" text-center d-flex justify-content-sm-start justify-content-center ">
@@ -195,7 +199,7 @@
                         <div class="card-header"  id="heading2">
                             <h2 class="mb-0"> 
                                 <button class="btn btn-lg btn-block text-center" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                    Deluxe
+                                    Superior
                                 </button>
                             </h2>
                         </div>
@@ -261,7 +265,7 @@
                         <div class="card-header"  id="heading3">
                             <h2 class="mb-0"> 
                                 <button class="btn btn-lg btn-block text-center" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    Jr. Suite
+                                    Deluxe
                                 </button>
                             </h2>
                         </div>
@@ -411,6 +415,80 @@
                     </div>
                 </div>
 
+            </div>
+            <div class="container-fluid mb-5">
+                <div class="row">
+                    <div class="col-12 mb-2">
+                        <h2 class="text-white text-center">Services & Amenities</h2>
+                    </div>
+                </div>
+                <div class="row row-content align-items-center justify-content-center " id="servicesButton">
+                    <div class="col-6 col-sm-4 col-md-3 amenities mr-2 mb-2">
+                        <a href="#consierge" role="button"class="btn btn-lg btn-block " data-toggle="collapse"> <i class="fas fa-concierge-bell"></i>
+                            <h5 class="text-white text-center">24h Consierge </h5>
+                        </a>
+                        <div class=" collapse multi-collapse" id="consierge" data-parent="#servicesButton">
+                            <p class="text-white  text-center"> Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 amenities mr-2 mb-2">
+                        <a href="#taxiService" role="button"class="btn btn-lg btn-block " data-toggle="collapse"> <i class="fas fa-taxi"></i>
+                            <h5 class="text-white text-center">Taxi service</h5>
+                        </a>
+                        <div class="collapse multi-collapse" id="taxiService" data-parent="#servicesButton">
+                            <p class="text-white text-center"> Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 amenities mr-2 mb-2">
+                        <a href="#pool" role="button"class="btn btn-lg btn-block " data-toggle="collapse"> <i class="fas fa-swimmer"></i>
+                            <h5 class="text-white text-center">Swimming pool </h5>
+                        </a> 
+                        <div class="collapse multi-collapse" id="pool" data-parent="#servicesButton">
+                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                        </div>   
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 amenities mr-2 mb-2">
+                        <a href="#restaurant" role="button"class="btn btn-lg btn-block " data-toggle="collapse"> <i class="fas fa-utensils"></i>
+                        <h5 class="text-white text-center">Restaurant </h5>
+                        </a>
+                        <div class="collapse multi-collapse" id="restaurant" data-parent="#servicesButton">
+                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 amenities mr-2 mb-2">
+                        <a href="#wifi" role="button"class="btn btn-lg btn-block " data-toggle="collapse"> <i class="fas fa-wifi"></i>
+                        <h5 class="text-white text-center">Free Wifi</h5>
+                        </a>
+                        <div class="collapse multi-collapse" id="wifi" data-parent="#servicesButton">
+                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 amenities mr-2 mb-2">
+                        <a href="#gym" role="button"class="btn btn-lg btn-block " data-toggle="collapse" > <i class="fas fa-dumbbell"></i>
+                        <h5 class="text-white text-center">Gym</h5>
+                        </a>
+                        <div class="collapse multi-collapse" id="gym" data-parent="#servicesButton">
+                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 amenities mr-2 mb-2">
+                        <a href="#cocktail" role="button" class="btn btn-lg btn-block " data-toggle="collapse"> <i class="fas fa-cocktail"></i>
+                        <h5 class="text-white text-center">Cocktail bar </h5> 
+                        </a>
+                        <div class="collapse multi-collapse" id="cocktail" data-parent="#servicesButton">
+                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 amenities mr-2 mb-2">
+                        <button  data-target="#spa"class="btn btn-lg btn-block " role="button" type="button" data-toggle="collapse"> <i class="fas fa-spa"></i> 
+                        <h5 class="text-white text-center">Spa</h5> 
+                        </button>
+                        <div class="collapse multi-collapse" id="spa" data-parent="#servicesButton">
+                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
        </div>
         <footer class="footer">

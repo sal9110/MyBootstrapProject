@@ -36,24 +36,26 @@ let adults = $('#adults')
 let kids = $('#kids');
 let roomSelection = $('#roomType').val('Select a room');
 
-
-    roomSelection.on('change', function(){
-       if( (roomSelection.val() === 'standard') && Number(adults.val()) + Number(kids.val()) > 2 ){
-        alert('This room has a max. capacity of 2 ppl');
-        adults.val('1');
-        kids.val('');
-       }
-       else if( (roomSelection.val() === 'premium'|| roomSelection.val() === 'deluxe') && Number(adults.val()) + Number(kids.val()) > 3 ){
-        alert('This room has a max. capacity of 3 ppl');
-        adults.val('1');
-        kids.val('');
-       }
-       
-       else if( (roomSelection.val() === 'suite') && Number(adults.val()) + Number(kids.val()) > 4 ){
-        alert('This room has a max. capacity of 4 ppl');
-        adults.val('1');
-        kids.val('');
-       }
-    });
+function roomCapacity(){
+    if( (roomSelection.val() === 'standard') && Number(adults.val()) + Number(kids.val()) >2){
+     alert('This room has a max. capacity of 2 ppl');
+     adults.val('1');
+     kids.val('');
+    }
+    else if( (roomSelection.val() === 'superior'|| roomSelection.val() === 'deluxe') && Number(adults.val()) + Number(kids.val()) > 3 ){
+     alert('This room has a max. capacity of 3 ppl');
+     adults.val('1');
+     kids.val('');
+    }
     
+    else if( (roomSelection.val() === 'suite') && Number(adults.val()) + Number(kids.val()) > 4 ){
+     alert('This room has a max. capacity of 4 ppl');
+     adults.val('1');
+     kids.val('');
+    }
+    };
+    roomSelection.on('change', roomCapacity);
+    adults.on('change', roomCapacity);
+    kids.on('change', roomCapacity);
+
 })

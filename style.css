@@ -1,28 +1,8 @@
-* {
-    margin:0px;
-    padding: 0px;
-    
-};
-
 html{
     width: 100%;
     height: 100%;
 }
 
-div{
-    margin: 0px;
-}
-.row-header {
-    margin: 0px ;
-    padding: 0px 0px; }
-  
-  .row-content {
-    margin: 0px auto;
-    padding: 0px 0px;
-    border-bottom: 1px ridge;
-    min-height: 300px; 
-    width: 100%;
-}
 
 body{
     margin:0px;
@@ -33,17 +13,25 @@ body{
     font-family: 'Lato', sans-serif;
     font-family: 'Dancing Script', cursive;
     font-size: 20px;
-};
+}
 
+.row-content {
+    margin: 0px auto;
+    padding: 0px 0px;
+    min-height: 300px; 
+    width: 100%;
+    
+}
 
-
-.row-header{
+.row {
+    margin: 0px;
     padding: 0px;
 }
 
-.row-content{
-    border-bottom: none;
+.media{
+    display: block;
 }
+/* Navbar */
 
 .navbar-light{
     background: #004353;
@@ -61,20 +49,31 @@ color: #499dae ;
     background-color:#499dae;
 }
 
+/* Jumbotrone */
+@media (min-width: 576px){
+    .jumbotron {
+padding: 0rem 0rem 0rem 0rem ;}
+}
+
+
+.jumbotron > .container-fluid {
+padding-left: 0px;
+padding-right: 0px ;
+}
+
+.jumbotron > .container-fluid > .col-12{
+padding-left: 0px;
+padding-right: 0px ;
+}
+
 .fa-star{
     font-size: 70%;
     color: gold;
 }
 
-.media{
-    display: block;
-}
-.row , .container{
-    margin: 0px;
-    padding: 0px;
-}
 
 
+/* Carousel */
 
 .carousel {
     background: #004353; 
@@ -114,10 +113,7 @@ color: #499dae ;
     }
 
 
-    @media (min-width: 576px){
-        .jumbotron {
-padding: 0rem 0rem 0rem 0rem ;}
-}
+  
 
 .carousel-caption{
     bottom: 0px;
@@ -134,35 +130,22 @@ padding: 0rem 0rem 0rem 0rem ;}
     opacity: 0.8;
 }
 
+/* Accordion  */
+
 .accordion .img-thumbnail{
     background-color: #499dae;;
 }
-
-.jumbotron > .container-fluid {
-    padding-left: 0px;
-    padding-right: 0px ;
-}
-
-.jumbotron > .container-fluid > .col-12{
-    padding-left: 0px;
-    padding-right: 0px ;
-}
-
 #heading1 ,#heading2, #heading3, #heading4 {
-    background:  #499dae ;;
+    background:  #499dae ;
 }
 
+/* Services and Amenities */
 .amenities{
     border: solid;
     color: #499dae;
     border-radius: 15px;
 }
 
-label, input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 /* #MODAL */
 .form-group{
     margin-bottom: 4px;
@@ -180,7 +163,18 @@ label, input{
 .modal-footer > button{
     color: whitesmoke;
 }
-/* #FOOTER */
+
+#reservationModal .modal-footer >button{
+    border: solid white 1px;
+}
+
+/* form  */
+label, input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #Footer */
 
 .copyright{
     font-size: 70%;
@@ -197,4 +191,3 @@ address {
     margin: 0px;
     color: #0f0f0f; }
 
-/* */
