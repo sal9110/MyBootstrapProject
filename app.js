@@ -8,6 +8,7 @@ $(document).ready(function(){
     $('#check-in').on('change',function(){
         let checkIn = new Date($('#check-in').val());
         checkInDate = checkIn.getTime();
+        getNights();
     });
     $('#check-out').on('change',function(){
         let checkOut = new Date($('#check-out').val());
@@ -22,7 +23,8 @@ $(document).ready(function(){
         }
         else if(checkOutDate<checkInDate)
         {alert('Check-out date cannot be before the Check-in one');
-        document.getElementById('nights').value = "0"
+        document.getElementById('nights').value = "0";
+        $('#check-out').val('');
         }
         
         else if (checkOutDate === checkInDate){
@@ -34,28 +36,32 @@ $(document).ready(function(){
     // MAXIMUM CAPACITY RULE BOOKING MODAL
 let adults = $('#adults')
 let kids = $('#kids');
+let roomsNr = $('#roomsNr');
 let roomSelection = $('#roomType').val('Select a room');
+function totalGuests(){ return Number(adults.val()) + Number(kids.val())};
+
+console.log(Number(adults.val()))
 
 function roomCapacity(){
-    if( (roomSelection.val() === 'standard') && Number(adults.val()) + Number(kids.val()) >2){
-     alert('This room has a max. capacity of 2 ppl');
-     adults.val('1');
-     kids.val('');
+    if( (roomSelection.val() === 'standard') && (totalGuests()/ Number(roomsNr.val()) >2  )){
+     alert('This room category  has a max. capacity of 2 ppl,plese select more');
+     roomSelection.val('Select a room');
+     roomsNr.val('1');
     }
-    else if( (roomSelection.val() === 'superior'|| roomSelection.val() === 'deluxe') && Number(adults.val()) + Number(kids.val()) > 3 ){
-     alert('This room has a max. capacity of 3 ppl');
-     adults.val('1');
-     kids.val('');
+    else if( (roomSelection.val() === 'superior'|| roomSelection.val() === 'deluxe') && (totalGuests()/ Number(roomsNr.val()) > 3  )){
+     alert('This room category  has a max. capacity of 3 ppl,plese select more');
+     roomSelection.val('Select a room');
+     roomsNr.val('1');
     }
     
-    else if( (roomSelection.val() === 'suite') && Number(adults.val()) + Number(kids.val()) > 4 ){
-     alert('This room has a max. capacity of 4 ppl');
-     adults.val('1');
-     kids.val('');
+    else if( (roomSelection.val() === 'suite') && (totalGuests()/ Number(roomsNr.val()) > 4  )){
+     alert('This room category  has a max. capacity of 4 ppl,plese select more');
+    roomSelection.val('Select a room');
+     roomsNr.val('1');
     }
     };
     roomSelection.on('change', roomCapacity);
     adults.on('change', roomCapacity);
     kids.on('change', roomCapacity);
-
+    roomsNr.on('change', roomCapacity);
 })

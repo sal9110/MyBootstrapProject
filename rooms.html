@@ -25,48 +25,79 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form">
-                                        <div class="form-group mb-1 row">
-                                            <label for="check-in" class="col-5 ">Check-in Date</label>
-                                            <input type="date" id="check-in" class="col-6">
+                                    <div class="form-group mb-1 row">
+                                        <label for="check-in" class="col-5 ">Check-in </label>
+                                        <input type="date" id="check-in" class="col-5">
+                                    </div>
+                                    <div class="form-group mb-2 row">
+                                        <label for="check-out" class="col-5 ">Check-out </label>
+                                        <input type="date" id="check-out" class="col-5">
+                                    </div>
+                                    <div class="form-group row ">
+                                        <div class="form-group row  col-12 col-sm-6 justify-content-center order-sm-last">
+                                            <label for="nights" class="col-4   ">Night/s</label>
+                                            <input type="number" id="nights" class="col-4 col-sm-4" value="" disabled>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="check-out" class="col-5 ">Check-out Date</label>
-                                            <input type="date" id="check-out" class="col-6">
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="nights" class="col-5 ">Nights</label>
-                                            <input type="number" id="nights" class="col-6" disabled>
-                                        </div>
-                                        <div class="form-group row ">
-                                            <div class="col-6 d-flex justify-content-center ">
-                                                <label for="adults" class=" mr-2 ">Adults</label>
-                                                <select name="adults" id="adults" >
+                                        <div class="form-group row col-12 col-sm-6 justify-content-center justify-content-sm-end">
+                                            <label for="roomsNr" class=" col-4 ">Room/s</label>
+                                                <select name="roomsNr" id="roomsNr" class="col-4 " >
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
                                                     <option value="4">4</option>
+                                                    <option value="5">5</option>
                                                 </select>
-                                            </div>
-                                            <div class="col-6 d-flex justify-content-center">
-                                                <label for="kids" class="mr-2 ">Kids</label>
-                                                <select name="kids" id="kids" >
-                                                    <option value="0"></option>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="form-group row col-sm-6 justify-content-center justify-content-sm-end ">
+                                    
+                                            <label for="adults" class=" col-4 ">Adult/s</label>
+                                        
+                                            <select name="adults" id="adults" class=" col-4 " >
+                                                <option value="0"></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group row col-sm-6 justify-content-center ">
+                                            <label for="kids" class="col-4   ">Kid/s</label>
+                                            
+                                                <select name="kids" id="kids" class="col-4  " >
+                                                    <option value=""></option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
                                                 </select>
-                                            </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="roomType" class="col-5">Room category</label>
-                                            <select name="roomType" id="roomType" class="col-5">
-                                                <option value="null">Select a room</option>
-                                                <option value="standard"> Standard</option>
-                                                <option value="superior">Superior</option>
-                                                <option value="deluxe"> Deluxe</option>
-                                                <option value="suite"> Suite</option>
-                                            </select>
-                                        </div>
+                                    </div>
+                            
+                                    <div class="form-group row">
+                                        <label for="roomType" class="col-5">Room category</label>
+                                        <select name="roomType" id="roomType" class="col-5">
+                                            <option value="null">Select a room</option> 
+                                            <option value="standard"> Standard</option>
+                                            <option value="superior">Superior</option>
+                                            <option value="deluxe"> Deluxe</option>
+                                            <option value="suite"> Suite</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -500,10 +531,7 @@
                                 <a href="#" class="text-dark">Home</a>
                             </li>
                             <li>
-                                <a href="/rooms.html" class="text-dark">Rooms</a>
-                            </li>
-                            <li>
-                                <a href="/services.html" class="text-dark">Services</a>
+                                <a href="/rooms.html" class="text-dark">Rooms & Services</a>
                             </li>
                             <li>
                                 <a href="/contact.html" class="text-dark">Contact</a>
